@@ -3,6 +3,7 @@
     <v-container grid-list-xl fluid>
       <v-layout row wrap>
         <!-- mini statistic start -->
+        <!--
         <v-flex lg3 sm6 xs12>
           <mini-statistic
             icon="fa fa-facebook"
@@ -39,6 +40,7 @@
           >
           </mini-statistic>
         </v-flex>
+        -->
         <!-- mini statistic  end -->
         <v-flex lg8 sm12 xs12>
           <v-widget title="Site Traffic" content-bg="white">
