@@ -4,7 +4,7 @@
       <v-layout row wrap>
           <h4>
       <i class="fa fa-smile-o"></i>
-      Hi there, i'm page of units.</h4>
+      Hi there, i'm page of administrators.</h4>
       </v-layout>
     </v-container>
   </div>

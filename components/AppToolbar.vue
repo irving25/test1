@@ -1,6 +1,6 @@
 <template>
   <v-toolbar
-    color="primary"
+    color="black"
     fixed
     dark
     app
@@ -8,6 +8,8 @@
     <v-toolbar-title class="ml-0 pl-3">
       <v-toolbar-side-icon @click.stop="toggleDrawer()"></v-toolbar-side-icon>
     </v-toolbar-title>
+
+<!--
     <v-text-field
       flat
       solo-inverted
@@ -16,13 +18,15 @@
       class="hidden-sm-and-down"
     >
     </v-text-field>
+-->
+
     <v-spacer></v-spacer>
-    <v-btn icon href="https://github.com/moeddami/nuxt-material-admin">
-      <v-icon>fa-2x fa-github</v-icon>
-    </v-btn>
-    <v-btn icon @click="handleFullScreen()">
-      <v-icon>fullscreen</v-icon>
-    </v-btn>
+  <v-menu offset-y origin="center center" class="elelvation-1" :nudge-right="140" :nudge-bottom="14" transition="scale-transition">
+      <v-btn icon flat slot="activator">
+
+          <v-icon medium>settings_applications</v-icon>
+      </v-btn>
+    </v-menu>
     <v-menu offset-y origin="center center" class="elelvation-1" :nudge-right="140" :nudge-bottom="14" transition="scale-transition">
       <v-btn icon flat slot="activator">
         <v-badge color="red" overlap>
@@ -68,24 +72,10 @@
           {
             icon: 'account_circle',
             href: '#',
-            title: 'Profile',
+            title: 'Usuario',
             click: (e) => {
               console.log(e);
             }
-          },
-          {
-            icon: 'settings',
-            href: '#',
-            title: 'Settings',
-            click: (e) => {
-              console.log(e);
-            }
-          },
-          {
-            icon: 'fullscreen_exit',
-            href: '#',
-            title: 'Logout',
-            click: this.handleLogout
           }
         ],
       }

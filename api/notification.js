@@ -1,29 +1,20 @@
 export default [
   {
-    title: 'New user registered',
-    color: 'light-green',
-    icon: 'account_circle',
-    timeLabel: 'Just now'
+    title: 'Peticion de servicio',
+    color: 'black',
+    icon: 'near_me',
+    timeLabel: 'Hace 5 minutos'
   },
-  { divider: true, inset: true },
   {
-    title: 'New order received',
-    color: 'light-blue',
-    icon: 'shopping_cart',
-    timeLabel: '2 min ago'
+    title: 'Peticion de servicio',
+    color: 'black',
+    icon: 'near_me',
+    timeLabel: 'Hace 8 minutos'
   },
-  { divider: true, inset: true },
   {
-    title: 'New payment made',
-    color: 'cyan',
-    icon: 'payment',
-    timeLabel: '24 min ago'
+    title: 'Peticion de servicio',
+    color: 'black',
+    icon: 'near_me',
+    timeLabel: 'Hace 13 minutos'
   },
-  { divider: true, inset: true },
-  {
-    title: 'New message from Michael',
-    color: 'red',
-    icon: 'email',
-    timeLabel: '1 hour ago'
-  }
 ];
