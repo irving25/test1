@@ -2,9 +2,7 @@
   <div id="pageDashboard">
     <v-container grid-list-xl fluid>
       <v-layout row wrap>
-          <h4>
-      <i class="fa fa-smile-o"></i>
-      Hi there, i'm page of register a drivers.</h4>
+        <ShipmentForm></ShipmentForm>
       </v-layout>
     </v-container>
   </div>
@@ -27,6 +25,8 @@
   import ChatWindow from '@/components/chat/ChatWindow';
   import CircleStatistic from '@/components/widgets/statistic/CircleStatistic';
   import LinearStatistic from '@/components/widgets/statistic/LinearStatistic';
+  import ShipmentForm from '@/components/widgets/form/ShipmentForm';
+
 
   export default {
     layout: 'dashboard',
@@ -44,7 +44,8 @@
       CircleStatistic,
       LinearStatistic,
       PlainTable,
-      PlainTableOrder
+      PlainTableOrder,
+      ShipmentForm
     },
     data: () => ({
       color: Material,
