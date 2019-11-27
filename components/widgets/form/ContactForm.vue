@@ -1,9 +1,15 @@
 <template>
+<v-dialog max-width="800px">
+    <v-btn slot="activator" class="success"><i class="material-icons">add_circle_outline</i></v-btn>
+<v-card>
+   <v-card-title>
+      <h2>Añadir nuevo conductor</h2>
+    </v-card-title>
   <v-card ref="form">
     <v-card-text>
       <v-text-field
-        label="Full Name"
-        placeholder="John Doe"
+        label="Nombre completo"
+        placeholder="Juan Lopez"
         v-model="name"
         required
         ref="name"
@@ -11,8 +17,8 @@
         :error-messages="errorMessages"
       ></v-text-field>
       <v-text-field
-        label="Address Line"
-        placeholder="Snowy Rock Pl"
+        label="Direccion"
+        placeholder="Fraccionamiento..."
         :rules="[
           () => !!address || 'This field is required',
           () => !!address && address.length <= 25 || 'Address must be less than 25 characters',
@@ -24,43 +30,57 @@
         required
       ></v-text-field>
       <v-text-field
-        label="City"
-        placeholder="El Paso"
+        label="Ciudad"
+        placeholder="Victoria de durango"
         :rules="[() => !!city || 'This field is required', addressCheck]"
         v-model="city"
         ref="city"
         required
       ></v-text-field>
       <v-text-field
-        label="State/Province/Region"
+        label="Estado"
         v-model="state"
         :rules="[() => !!state || 'This field is required']"
         required
         ref="state"
-        placeholder="TX"
+        placeholder="Durango"
       ></v-text-field>
       <v-text-field
-        label="ZIP / Postal Code"
+        label="Codigo Postal"
         required
         :rules="[() => !!zip || 'This field is required']"
         v-model="zip"
         ref="zip"
-        placeholder="79938"
+        placeholder="34000"
       ></v-text-field>
-      <v-select
-        autocomplete
-        label="Country"
-        placeholder="Select..."
-        :rules="[() => !!country || 'This field is required']"
-        :items="countries"
-        v-model="country"
-        ref="country"
+       <v-text-field
+        label="Correo electronico"
         required
-      ></v-select>
+        :rules="[() => !!zip || 'This field is required']"
+        v-model="email"
+        ref="email"
+        placeholder="Juan@gmail.com"
+      ></v-text-field>
+        <v-text-field
+        label="Telefono celular"
+        required
+        :rules="[() => !!zip || 'This field is required']"
+        v-model="cellphone"
+        ref="cellphone"
+        placeholder="(***)***-**-**"
+      ></v-text-field>
+      <v-text-field
+        label="Numero de licencia"
+        required
+        :rules="[() => !!zip || 'This field is required']"
+        v-model="licence"
+        ref="licence"
+        placeholder="654897"
+      ></v-text-field>
     </v-card-text>
     <v-divider class="mt-5"></v-divider>
     <v-card-actions>
-      <v-btn flat>Cancel</v-btn>
+      <v-btn type="clear" flat>Cancel</v-btn>
       <v-spacer></v-spacer>
       <v-slide-x-reverse-transition>
         <v-tooltip
@@ -81,6 +101,8 @@
       <v-btn color="primary" flat @click="submit">Submit</v-btn>
     </v-card-actions>
   </v-card>
+</v-card>
+  </v-dialog>
 </template>
 
 <script>
@@ -143,3 +165,9 @@ export default {
   }
 };
 </script>
+<style>
+.success{
+  margin-top: -100px;
+  margin-left: 850px;
+}
+</style>

@@ -18,22 +18,16 @@ const Menu = [
     group: 'apps',
     name: 'Mail',
     icon: 'group',
-    items:[
-      {name: 'registroconductores', title: 'Registro de conductores', href: '/conductoresR'},
-      {name: 'conductores', title: 'Conductores', href: '/conductores'},
-    ]
+    name: 'registroconductores',
+    href: '/conductores'
   },
   {
     title: 'Administradores',
     group: 'apps',
     name: 'Administradores',
     icon: 'assignment_ind',
-    items:[
-      {name: 'administradores', title: 'Administradores', href: '/administrador'},
-      {name: 'registroadministradores', title: 'Registro de administradores', href: '/administradorR'},
-
-
-    ]
+    name: 'administradores',
+    href: '/administrador',
   },
   {
     title: 'Viajes',
